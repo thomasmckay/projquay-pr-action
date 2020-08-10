@@ -1,0 +1,10 @@
+ name: "Project Quay Pull Request Action"
+ on: pull_request
+ jobs:
+    projquay_pr_action:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: thomasmckay/projquay-pr-action@master
+          with:
+              repo-token: "${{ secrets.GITHUB_TOKEN }}"
+              branch-regex: ".+"

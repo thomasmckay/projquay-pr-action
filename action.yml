@@ -1,0 +1,17 @@
+name: "Project Quay Pull Request GitHub Action"
+description: "Project Quay Pull Request GitHub Action"
+author: "thomasmckay@redhat.com"
+runs:
+    using: "node12"
+    main: "dist/index.js"
+inputs:
+    repo-token:
+        description: "The GITHUB_TOKEN secret"
+        required: true
+    branch-regex:
+        description: "Regex to match branch name"
+        required: true
+        default: ".*"
+branding:
+    icon: "edit-3"
+    color: "green"
