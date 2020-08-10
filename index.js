@@ -27,9 +27,13 @@ async function run() {
 
         const title = github.context.payload.pull_request.title || "";
 
+        // Check title
+        core.debug(`title: ${title}`);
         if (!title.match(new RegExp("PROJQUAY-[0-9]+ - "))) {
-            core.error("Title does not prefixed with PROJQUAY jira")
+            core.setFailed("Title missing PROJQUAY jira issue");
         }
+
+        //Check body
     } catch (error) {
         core.error(error);
         core.setFailed(error.message);
