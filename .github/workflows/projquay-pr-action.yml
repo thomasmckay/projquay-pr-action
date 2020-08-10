@@ -4,7 +4,7 @@
     projquay_pr_action:
         runs-on: ubuntu-latest
         steps:
-        - uses: thomasmckay/projquay-pr-action@master
+        - uses: thomasmckay/projquay-pr-action@working
           with:
               repo-token: "${{ secrets.GITHUB_TOKEN }}"
               branch-regex: ".+"

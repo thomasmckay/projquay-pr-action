@@ -3,7 +3,7 @@ description: "Project Quay Pull Request GitHub Action"
 author: "thomasmckay@redhat.com"
 runs:
     using: "node12"
-    main: "dist/index.js"
+    main: "index.js"
 inputs:
     repo-token:
         description: "The GITHUB_TOKEN secret"

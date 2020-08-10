@@ -1,1 +1,1 @@
-# projquay-pr-action
+# Project Quay Pull Request Github Action
